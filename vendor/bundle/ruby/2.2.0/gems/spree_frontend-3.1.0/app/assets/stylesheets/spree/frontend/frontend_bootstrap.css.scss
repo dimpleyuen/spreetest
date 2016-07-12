@@ -49,6 +49,77 @@
   color: white;
 }
 
+$breakpoint-sm: 768px;
+$breakpoint-md: 992px;
+$breakpoint-lg: 1200px;
+
+// -- How We Work Page ----------------------------------
+.how-we-work {
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (min-width: $breakpoint-sm) {
+    flex-direction:row;
+  }
+
+  .how-we-work-icons {
+    padding: 0 35px;
+
+    .glyphicon {
+      font-size: 80px;
+      border: 5px dashed #da1159;
+      border-radius: 90px;
+      padding: 45px;
+      color: #da1159;
+    }
+  }
+}
+
+.call-to-action {
+  text-align: center;
+  margin-bottom: 50px;
+  .btn {
+    width: 300px;
+  }
+}
+
+// -- Image Divider -------------------------------------
+.image-drinks {
+  background: #FFFFFF asset-url('drinks.jpg') center center;
+  height: 500px; /* fallback */
+  height: 50vh;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  .quote {
+    background-color: rgba(255,255,255,0.6);
+    padding: 60px 0;
+    font-size: 40px;
+    align-self: stretch;
+    text-transform: uppercase;
+  }
+
+  .quote:before {
+    content: open-quote;
+    font-weight: bold;
+    font-size:100px;
+    color: #f1b242;
+}
+  .quote:after {
+    content: close-quote;
+    font-weight: bold;
+    font-size:100px;
+    color: #f1b242;
+}
+}
+
 // -- Spree Layout Custom Rules -------------------------
 
 .alert-notice { @extend .alert-success; }
@@ -56,7 +127,7 @@
 .alert-alert { @extend .alert-info; }
 
 .product-body {
-  height: 180px;
+  height: 200px;
 }
 
 .progress-steps {
